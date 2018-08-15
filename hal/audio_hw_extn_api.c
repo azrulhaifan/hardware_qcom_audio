@@ -326,7 +326,7 @@ ssize_t qahwi_out_write_v2(struct audio_stream_out *stream, const void* buffer,
         memcpy(buf + mdata_size, buffer, bytes);
         ret = out->qahwi_out.base.write(&out->stream, (void *)buf, out->qahwi_out.buf_size);
         if (ret <= 0) {
-            ALOGE("%s: error! write returned %zd", __func__, ret);
+            ALOGE("%s: error! write returned %jd", __func__, ret);
         } else {
             bytes_written = bytes;
         }
