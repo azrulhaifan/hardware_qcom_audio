@@ -36,7 +36,7 @@ AUDIO_FEATURE_ENABLED_SND_MONITOR := true
 ##AUDIO_FEATURE_FLAGS
 
 #Audio Specific device overlays
-DEVICE_PACKAGE_OVERLAYS += hardware/qcom/audio/configs/common/overlay
+DEVICE_PACKAGE_OVERLAYS += hardware/qcom/audio-caf-msm8996/configs/common/overlay
 
 
 # Audio configuration file
@@ -45,32 +45,32 @@ PRODUCT_COPY_FILES += \
     device/qcom/common/media/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf
 else
 PRODUCT_COPY_FILES += \
-    hardware/qcom/audio/configs/msm8909/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf
 endif
 PRODUCT_COPY_FILES += \
-    hardware/qcom/audio/configs/msm8909/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
-    hardware/qcom/audio/configs/msm8909/mixer_paths_qrd_skuh.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skuh.xml \
-    hardware/qcom/audio/configs/msm8909/mixer_paths_qrd_skui.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skui.xml \
-    hardware/qcom/audio/configs/msm8909/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    hardware/qcom/audio/configs/msm8909/mixer_paths_msm8909_pm8916.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_msm8909_pm8916.xml \
-    hardware/qcom/audio/configs/msm8909/mixer_paths_wcd9326_i2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9326_i2s.xml \
-    hardware/qcom/audio/configs/msm8909/mixer_paths_skua.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skua.xml \
-    hardware/qcom/audio/configs/msm8909/mixer_paths_skuc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skuc.xml \
-    hardware/qcom/audio/configs/msm8909/mixer_paths_skue.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skue.xml \
-    hardware/qcom/audio/configs/msm8909/mixer_paths_qrd_skut.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skut.xml \
-    hardware/qcom/audio/configs/msm8909/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
-    hardware/qcom/audio/configs/msm8909/sound_trigger_mixer_paths_wcd9326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9326.xml \
-    hardware/qcom/audio/configs/msm8909/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
-    hardware/qcom/audio/configs/msm8909/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths_qrd_skuh.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skuh.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths_qrd_skui.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skui.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths_msm8909_pm8916.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_msm8909_pm8916.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths_wcd9326_i2s.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9326_i2s.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths_skua.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skua.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths_skuc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skuc.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths_skue.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skue.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/mixer_paths_qrd_skut.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skut.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/sound_trigger_mixer_paths_wcd9326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9326.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
+    hardware/qcom/audio-caf-msm8996/configs/msm8909/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml
 
 #XML Audio configuration files
 ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
 ifneq ($(TARGET_USES_AOSP_FOR_AUDIO), true)
 PRODUCT_COPY_FILES += \
-    $(TOPDIR)hardware/qcom/audio/configs/msm8909/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
+    $(TOPDIR)hardware/qcom/audio-caf-msm8996/configs/msm8909/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
 endif
 PRODUCT_COPY_FILES += \
-    $(TOPDIR)hardware/qcom/audio/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(TOPDIR)hardware/qcom/audio-caf-msm8996/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
